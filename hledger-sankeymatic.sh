@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# hledger is -NO csv | 
-
 awk -F '","' 'NR>3 {
   account = $1
   gsub(/"/, "", account);
