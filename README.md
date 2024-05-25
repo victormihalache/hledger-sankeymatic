@@ -42,3 +42,10 @@ cd hledger-sankeymatic
 chmod +x ./hledger-sankeymatic.sh
 hledger incomestatement -N -O csv | ./hledger-sankeymatic.sh
 ```
+
+## Roadmap
+
+These are the things I want to work on when I either have time to tackle them or when I find out how to do them. If you with to help out feel free to open an issue or a PR.
+
+- [ ] Differentiate when two accounts have the same sub-account
+- [ ] Allow customizing the name of the intermediary "Budget" sub-account
