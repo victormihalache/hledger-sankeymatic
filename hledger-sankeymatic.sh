@@ -17,14 +17,14 @@ awk -F '","' 'NR>3 {
       expenses_subaccounts[subaccounts[i-1]] = 1
       expenses_subaccounts[subaccounts[i]] = 1
 
-      expenses_flows[subaccounts[i-1] ":" subaccounts[i]] += $2
+      expenses_flows[subaccounts[i-1] ":" subaccounts[i]] += amount
     } else {
       # We are before the "Expenses" marker
 
       revenues_subaccounts[subaccounts[i]] = 1
       revenues_subaccounts[subaccounts[i-1]] = 1
 
-      revenues_flows[subaccounts[i] ":" subaccounts[i-1]] += $2
+      revenues_flows[subaccounts[i] ":" subaccounts[i-1]] += amount
     }
   }
 } END {
