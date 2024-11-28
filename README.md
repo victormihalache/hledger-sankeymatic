@@ -31,10 +31,10 @@ chmod +x ./hledger-sankeymatic.sh
 4. Pipe `hledger`'s output to the script
 
 ```sh
-hledger incomestatement -N -O csv | ./hledger-sankeymatic.sh
+hledger incomestatement -N -O csv --no-conf | ./hledger-sankeymatic.sh
 ```
 
-On MacOS you can just copy this all:
+On MacOS/Linux you can just copy this all:
 
 ```sh
 git clone https://github.com/victormihalache/hledger-sankeymatic.git
