@@ -6,7 +6,7 @@ This is a script that calls `awk` to generate instructions you can then pluck in
 
 Make sure you have `awk` or `gawk` installed in your system.
 
-## Usage
+## Install
 
 The script expects the output of `hledger is -NO csv`, thus to use this you have to:
 
@@ -28,19 +28,26 @@ cd hledger-sankeymatic
 chmod +x ./hledger-sankeymatic.sh
 ```
 
-4. Pipe `hledger`'s output to the script
-
-```sh
-hledger incomestatement -N -O csv --no-conf | ./hledger-sankeymatic.sh
-```
-
-On MacOS/Linux you can just copy this all:
+...or you can just copy this all:
 
 ```sh
 git clone https://github.com/victormihalache/hledger-sankeymatic.git
 cd hledger-sankeymatic
 chmod +x ./hledger-sankeymatic.sh
+```
+
+## Usage
+
+To run the script, pipe the output of `hledger` to the script:
+
+```sh
 hledger incomestatement -N -O csv --no-conf | ./hledger-sankeymatic.sh
+```
+
+If on MacOS, you can copy the output to the clipboard by adding another pipe to `pbcopy` as such:
+
+```sh
+hledger incomestatement -N -O csv --no-conf | ./hledger-sankeymatic.sh | pbcopy
 ```
 
 ## Roadmap
