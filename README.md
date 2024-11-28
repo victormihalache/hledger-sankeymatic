@@ -40,7 +40,7 @@ On MacOS/Linux you can just copy this all:
 git clone https://github.com/victormihalache/hledger-sankeymatic.git
 cd hledger-sankeymatic
 chmod +x ./hledger-sankeymatic.sh
-hledger incomestatement -N -O csv | ./hledger-sankeymatic.sh
+hledger incomestatement -N -O csv --no-conf | ./hledger-sankeymatic.sh
 ```
 
 ## Roadmap
